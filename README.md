@@ -1,1 +1,0 @@
-# Django-ORM-Watching-Storage #
