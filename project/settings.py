@@ -1,22 +1,17 @@
 import os
+import dj_database_url
 from dotenv import load_dotenv
 
 load_dotenv()
+db_settings = os.getenv('DB_SETTINGS')
 
 DATABASES = {
-    'default': {
-        'ENGINE': os.getenv('DB_ENGINE'),
-        'HOST': os.getenv('DB_HOST'),
-        'PORT': os.getenv('DB_PORT'),
-        'NAME': os.getenv('DB_NAME'),
-        'USER': os.getenv('DB_USER'),
-        'PASSWORD': os.getenv('DB_PASSWORD'),
+    'default': dj_database_url.parse(db_settings)
     }
-}
 
 INSTALLED_APPS = ['datacenter']
 
-SECRET_KEY = os.getenv('DJANGO_SECRET_KEY')
+SECRET_KEY = os.getenv('SECRET_KEY')
 
 DEBUG = os.getenv('DEBUG', default=False)
 
