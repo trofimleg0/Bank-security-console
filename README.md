@@ -33,4 +33,6 @@ Run `manage.py`
 ```commandline
 python manage.py runserver 8000
 ```
-  
+## Project goals
+
+The code is written for educational purposes — this is a lesson in a course on Python and web development on the [Devman] website (https://dvmn.org ).
